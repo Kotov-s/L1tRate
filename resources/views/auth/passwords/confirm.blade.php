@@ -1,7 +1,7 @@
-@extends('layouts.app')
+@extends('layouts.base')
 
 @section('content')
-<main class="py-4 auth-card">
+<main class="bg-white m-auto p-5 rounded-4 shadow my-width">
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">

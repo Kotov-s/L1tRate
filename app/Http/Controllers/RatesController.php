@@ -19,7 +19,8 @@ class RatesController extends Controller
             ->orderBy('created_at', 'desc');
         
         return view('list_of_rates', [
-            'rates' => $rates->paginate(25)
+            'rates' => $rates->paginate(25),
+            'users_rates' => ($search == Auth::user()->id) ? true : false
         ]);
     }
 

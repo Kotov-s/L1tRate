@@ -12,7 +12,7 @@ class BookController extends Controller
     public function show(Book $book)
     {
         $comments = $book->comment()->orderBy('created_at', 'desc')->get();
-        return view('book', [
+        return view('book.book', [
             'book' => $book,
             'comments' => $comments
         ]);

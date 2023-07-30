@@ -1,12 +1,12 @@
-@extends('layouts.app')
+@extends('layouts.base')
 
 @section('content')
 <main class="py-4 auth-card" >
 <div >
     <div >
         <div >
-            <div class="pb-3 projects-section">
-                <div class="projects-section-header"> <p>{{ __('Login') }}</p> </div>
+            <div class="bg-white m-auto p-5 rounded-4 shadow my-width">
+                <div class="h4"> <p>{{ __('Login') }}</p> </div>
 
                 <div class="card-body">
                     <form method="POST" action="{{ route('login') }}">
@@ -30,7 +30,7 @@
                             <label for="password" class="col-md-4 col-form-label text-md-end">{{ __('Password') }}</label>
 
                             <div class="col-md-6">
-                                <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password">
+                                <input id="password" name="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password">
 
                                 @error('password')
                                     <span class="invalid-feedback" role="alert">

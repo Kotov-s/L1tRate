@@ -1,12 +1,12 @@
-@extends('layouts.app')
+@extends('layouts.base')
 
 @section('content')
-<main class="py-4 auth-card">
+<main class="bg-white m-auto p-5 rounded-4 shadow my-width">
 <div >
     <div >
         <div >
             <div class="pb-3 projects-section">
-                <div class="projects-section-header"> <p>{{ __('Reset Password') }}</p> </div>
+                <div class="h4"> <p>{{ __('Reset Password') }}</p> </div>
 
                 <div class="card-body">
                     @if (session('status'))
